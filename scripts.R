@@ -1,0 +1,7 @@
+library('rtracklayer')
+read.table('int.txt',header=T)
+interesting=read.table("interesting.txt",header=T)
+library("GenomicRanges")
+int=makeGRangesFromDataFrame(interesting[,c(4:6)],seqnames.field = "End",start.field = "Probe_Strand",end.field = "Feature_ID")
+export.bed(int,con)
+con <- file("int.bed")

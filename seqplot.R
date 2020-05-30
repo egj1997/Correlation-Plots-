@@ -1,0 +1,3 @@
+#Seqplot
+library("seqplots")
+run()
